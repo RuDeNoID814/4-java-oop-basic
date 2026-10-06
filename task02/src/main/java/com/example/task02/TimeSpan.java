@@ -128,6 +128,7 @@ public class TimeSpan {
         }
     }
 
+    @Override
     public String toString() {
         return getHours() + " часов, " + getMinutes() + " минут, " + getSecond() + " секунд";
     }
