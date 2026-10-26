@@ -2,8 +2,8 @@ package com.example.task04;
 
 public class Line {
 
-    private Point p1;
-    private Point p2;
+    private final Point p1;
+    private final Point p2;
 
     public Line(Point p1, Point p2) {
         this.p1 = p1;
@@ -19,7 +19,8 @@ public class Line {
     //endregion
 
     public boolean isCollinearLine(Point p) {
-        return ((p.x - this.p1.x)*(this.p2.y - this.p1.y) - (p.y - this.p1.y)*(this.p2.x - this.p1.x)) == 0;
+        return ((p.x - getP1().x)*(getP2().y - getP1().y) -
+                (p.y - getP1().y)*(getP2().x - getP1().x)) == 0;
     }
 
     @Override
